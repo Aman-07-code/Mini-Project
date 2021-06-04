@@ -50,6 +50,4 @@ you'd like. Pull requests are warmly welcome. Thanks alot
 If you found this project useful, then please consider giving it a :star: on Github 
 and sharing it with your friends via social media.
 
-<!-- CONTACT -->
 
-## :man: Project Created & Maintained By -
