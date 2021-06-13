@@ -7,12 +7,8 @@ from datetime import datetime
 from matplotlib import pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
-import time
 from suntime import Sun, SunTimeException 
-from suntimes import SunTimes
-import sunriset
-import astral, astral.sun
-from datetime import date, datetime, timezone, timedelta
+
 
 owm=pyowm.OWM('54266812aa06b736e115eed49ecf2564')
 mgr=owm.weather_manager()
@@ -149,28 +145,16 @@ def sunrise_and_sunset():
     weather=obs.weather
     st.title("Sunrise and Sunset Times :")
 
-
     latitude = 	28.644800
     longitude = 77.216721
     altitude = 0
     intz = pytz.timezone('Asia/Kolkata')
-    tz_name = 'Asia/Kolkata'
-    # for_date = date
+    # tz_name = 'Asia/Kolkata'
     sun = Sun(latitude, longitude)
-   
-
     today_sr = sun.get_sunrise_time()
     today_ss = sun.get_sunset_time()   
     sr = today_sr.astimezone(intz)
     ss = today_ss.astimezone(intz)
-    # india = pytz.timezone("Asia/Kolkata")
-    # sr=weather.sunrise_time(timeformat='iso')
-    # ss=weather.sunset_time(timeformat='iso')  
-
-    # sun2 = SunTimes(longitude=longitude, latitude=latitude, altitude=altitude)
-    # day = datetime(for_date.year, for_date.month, for_date.day)
-    # ss = sun2.risewhere(day, tz_name)
-    # sr = sun2.setwhere(day, tz_name)
     st.write("### Sunrise time in",place,"is",sr)
     st.write("### Sunset time in",place,"is",ss)
 
