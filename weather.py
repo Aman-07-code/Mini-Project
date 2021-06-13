@@ -7,7 +7,7 @@ from datetime import datetime
 from matplotlib import pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
-from suntime import Sun, SunTimeException 
+from suntime import Sun 
 
 
 owm=pyowm.OWM('54266812aa06b736e115eed49ecf2564')
